@@ -1,7 +1,7 @@
 import Hangmanart as Hangmanart
 import random
 
-
+print(Hangmanart.title)
 
 lives=6
 assigned_word= random.choice(Hangmanart.word).lower()

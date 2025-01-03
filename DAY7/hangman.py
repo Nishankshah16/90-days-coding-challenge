@@ -5,7 +5,7 @@ print(Hangmanart.title)
 
 lives=6
 assigned_word= random.choice(Hangmanart.word).lower()
-
+print(assigned_word)
 placeholder=""
 for position in range(0,len(assigned_word)):
     placeholder+="_"
@@ -27,7 +27,7 @@ while not game_over:
             display+="_"
 
     print(display)
-    print(Hangmanart.HANGMANPICS[lives])
+   
 
     if "_" not in display:
         game_over=True
@@ -38,4 +38,4 @@ while not game_over:
             game_over=True
             print("You lose")
     
-   
+    print(Hangmanart.HANGMANPICS[lives])

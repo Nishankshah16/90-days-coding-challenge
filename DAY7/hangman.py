@@ -1,21 +1,27 @@
 import Hangmanart as Hangmanart
+import hangman_words as Hangmanword
 import random
 
 print(Hangmanart.title)
 
 lives=6
-assigned_word= random.choice(Hangmanart.word).lower()
+assigned_word= random.choice(Hangmanword.word).lower()
 
 placeholder=""
 for position in range(0,len(assigned_word)):
     placeholder+="_"
-print(placeholder)
+print("Word to guess: ", placeholder)
 
 correct_letters=[]
 game_over=False
 
 while not game_over:
-    guess= input("Guess the letter : " ).lower()[0]
+    print(f"******************************{lives}/6 LIVES LEFT ******************************")
+    guess= input("Guess the letter : " ).lower()
+
+    if guess in correct_letters:
+        print(f"You have already guessed {guess}")
+
     display=""
     for letter in assigned_word:
         if letter == guess:
@@ -26,16 +32,15 @@ while not game_over:
         else:
             display+="_"
 
-    print(display)
-    print(Hangmanart.HANGMANPICS[lives])
+    print("Word to guess: ", display)
 
     if "_" not in display:
         game_over=True
-        print("you win")
+        print("***************You win****************")
     elif guess not in assigned_word:
         lives-=1
+        print(f"You guesses {guess}, thats not in the word. You lose a life.")
         if lives==0:
             game_over=True
-            print("You lose")
-    
-   
+            print(f"The word was {assigned_word}.You lose")
+    print(Hangmanart.HANGMANPICS[lives])

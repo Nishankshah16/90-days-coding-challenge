@@ -1,57 +1,52 @@
 from turtle import Turtle, Screen
-import time
 
-screen=Screen()
-screen.setup(500,500)
-screen.bgcolor("black")
-screen.title("Saap sheedi The ultimate Nokia game!!!!!")
-screen.tracer(0)
-inital_xcorr=[0,-20,-40]
-segment=[]
+STARTING_POSITION=[(0,0),(-20,0),(-40,0)]
+MOVE_DIST = 20
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
 
+class Snake:
 
-# angela's method
-starting_position=[(0,0),(-20,0),(-40,0)]
+    def __init__(self):
+        self.segment = []
+        self.create_snake()
+        self.head = self.segment[0]
 
-for i in starting_position:
-    new_turtle=Turtle(shape="square")
-    new_turtle.color("white")
-    new_turtle.penup()
-    new_turtle.goto(i)
-    segment.append(new_turtle)
+    def create_snake(self):
+        for i in STARTING_POSITION:
+            self.add_seg(i)
 
+    def add_seg(self, position):
+        new_turtle=Turtle(shape="square")
+        new_turtle.color("white")
+        new_turtle.penup()
+        new_turtle.goto(position)
+        self.segment.append(new_turtle)
 
-########################
+    def extend(self):
+        self.add_seg(self.segment[-1].position())
 
-# my method
-# for i in range(3):
-#     new_turtle=Turtle(shape="square")
-#     new_turtle.color("white")
-#     new_turtle.goto(x=inital_xcorr[i],y=0)
+    def move(self):
+        for seg in range(len(self.segment)-1, 0, -1):
+            x_cor = self.segment[seg-1].xcor()
+            y_cor = self.segment[seg-1].ycor()
+            self.segment[seg].goto(x_cor, y_cor)
+        self.head.forward(MOVE_DIST)
 
+    def up(self):
+        if self.head.heading() != DOWN:
+            self.head.setheading(UP)
 
-game_is_on=True
+    def down(self):
+        if self.head.heading() != UP:
+            self.head.setheading(DOWN)
 
-while game_is_on:
-    screen.update()
-    time.sleep(0.1)
-    for seg in segment:
-        seg.forward(10)
-        
+    def left(self):
+        if self.head.heading() != RIGHT:
+            self.head.setheading(LEFT)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-screen.exitonclick()
+    def right(self):
+        if self.head.heading() != LEFT:
+            self.head.setheading(RIGHT)

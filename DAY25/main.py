@@ -22,3 +22,25 @@ data= pd.read_csv("./DAY25/weather_data.csv")
 
 data_dict= data.to_dict()
 print(data_dict)
+
+# temp_list=data["temp"].to_list()
+# print(temp_list)
+
+# Average=sum(temp_list)/len(temp_list)
+# print(Average)
+
+# print(data["temp"].mean())
+
+# print(data["temp"].max())
+
+# #get data in column
+# print(data["day"]=="Monday")
+
+# print(data[data["temp"]==data["temp"].max()])
+
+monday=data[data["day"]=="Monday"]
+# print(monday)
+# print(monday["condition"])
+print(monday["temp"][0])
+monday_temp=monday["temp"][0]
+monday_temp_f=monday_temp * 9/5 +32

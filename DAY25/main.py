@@ -17,5 +17,8 @@ with open("./DAY25/weather_data.csv") as file:
 import pandas as pd
 
 data= pd.read_csv("./DAY25/weather_data.csv")
-print(data)
-print(data["temp"])
+# print(data)
+# print(data["temp"])
+
+data_dict= data.to_dict()
+print(data_dict)

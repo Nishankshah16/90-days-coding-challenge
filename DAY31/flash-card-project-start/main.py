@@ -16,8 +16,10 @@ try:
 except FileNotFoundError:
     df=pd.read_csv("/Users/nishanknitinshah/Documents/Python/90 DAYS OF PYTHON/DAY31/flash-card-project-start/data/french_words.csv")
     list1 = df.to_dict(orient="records")
+
 else:
-    list1 = df.to_dict(orient="records")
+    list1 = data.to_dict(orient="records")
+
 card = {}
 
 def generate_word():
@@ -41,6 +43,8 @@ def isknown():
     data=pd.DataFrame(list1)
     data.to_csv("/Users/nishanknitinshah/Documents/Python/90 DAYS OF PYTHON/DAY31/flash-card-project-start/data/Words_to_learn.csv")
     generate_word()
+
+
 timer = windows.after(3000, flip)
 
 

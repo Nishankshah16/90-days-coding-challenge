@@ -2,8 +2,8 @@ import smtplib
 import datetime
 import random
 
-my_email="nishankshah16@gmail.com"
-my_password="jfvsheglvbufxplb"
+my_email=""
+my_password=""
 # with smtplib.SMTP("smtp.mail.gmail.com") as connection:
 #     connection.starttls()
 #     connection.login(user=my_email,password=my_password)

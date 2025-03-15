@@ -1,4 +1,4 @@
-
+# https://docs.python.org/3/tutorial/floatingpoint.html         --floatingpoint arithmetic
 #method 1 
 def total_bill_tip_split_calc():  
     print("Welcome to tip calculator")

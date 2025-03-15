@@ -1,3 +1,11 @@
+# https://en.wikipedia.org/wiki/International_Space_Station     --ISS
+# https://en.wikipedia.org/wiki/API                             --API
+# http://open-notify.org/Open-Notify-API/ISS-Location-Now/      --ISS current loc API docs
+# https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?pli=1           --JSON viewer
+# https://www.webfx.com/web-development/glossary/http-status-codes/                 --HTTPS status code
+# https://www.latlong.net/Show-Latitude-Longitude.html          --lat long 
+# https://docs.python-requests.org/en/latest/                   --requests module
+
 import requests
 from datetime import datetime
 import smtplib

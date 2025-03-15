@@ -1,3 +1,9 @@
+# https://tkdocs.com/tutorial/canvas.html           --canvas docs
+# https://www.w3schools.com/python/python_file_write.asp        --writing to file docs
+# https://tkdocs.com/tutorial/widgets.html#entry                --entry widget docs
+# https://www.w3schools.com/python/ref_string_join.asp          --join()
+# https://pypi.org/project/pyperclip/                           --pyperclip docs
+
 from tkinter import *
 from tkinter import messagebox
 import pyperclip

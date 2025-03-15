@@ -1,0 +1,11 @@
+* Mersenne_Twister
+https://en.wikipedia.org/wiki/Mersenne_Twister
+
+*random-vs-pseudorandom-number
+https://www.khanacademy.org/computing/computer-science/cryptography/crypt/v/random-vs-pseudorandom-number-generators
+
+* random docs
+https://docs.python.org/3/library/random.html
+
+* data structure
+https://docs.python.org/3/tutorial/datastructures.html

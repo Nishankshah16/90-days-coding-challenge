@@ -1,3 +1,6 @@
+# https://colorhunt.co/                 --choose color
+# https://www.tcl-lang.org/man/tcl8.6/TclCmd/after.htm          --after()
+
 import tkinter
 from tkinter import *
 import math

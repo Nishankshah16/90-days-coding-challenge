@@ -1,7 +1,9 @@
+# https://docs.python.org/3/library/tkinter.html#the-packer         --packer docs
+# https://www.tcl-lang.org/man/tcl8.6/TkCmd/pack.htm                --pack()
+# https://www.tcl-lang.org/man/tcl8.6/TkCmd/entry.htm               --enytry()
+
 import tkinter
 from tkinter import Entry, Button
-
-
 
 window= tkinter.Tk()
 window.title("My first gui program")

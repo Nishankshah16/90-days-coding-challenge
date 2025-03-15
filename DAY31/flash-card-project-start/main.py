@@ -1,3 +1,8 @@
+# https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists
+# https://github.com/hermitdave/FrequencyWords/tree/master/content/2018
+# https://cloud.google.com/translate/docs/languages?hl=en       --google translate google code
+# https://support.google.com/docs/answer/3093331?hl=en-GB       --google translate for google sheet
+
 BACKGROUND_COLOR = "#B1DDC6"
 list1={}
 

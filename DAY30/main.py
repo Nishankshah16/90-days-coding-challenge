@@ -1,3 +1,6 @@
+# https://docs.python.org/3/library/json.html           --python JSON module
+
+
 from tkinter import *
 from tkinter import messagebox
 import pyperclip

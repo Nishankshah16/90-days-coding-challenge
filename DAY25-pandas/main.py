@@ -1,3 +1,7 @@
+# https://pandas.pydata.org/docs/                           --pandas docs
+# https://pandas.pydata.org/docs/reference/index.html       --pandas API ref
+# https://docs.google.com/spreadsheets/d/1Rs1CKjiagTeXa53212JkjRSDu-tx77_YxEgGdkv5zRY/edit?gid=0#gid=0          --weather data
+
 with open("./DAY25/weather_data.csv") as file:
     weather_data=file.readlines()
     print(weather_data)

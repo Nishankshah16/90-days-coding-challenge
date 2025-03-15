@@ -1,3 +1,7 @@
+# https://trinket.io/docs/colors        --trinket colors
+# https://docs.python.org/3/library/turtle.html         --turtle graphics docs
+# https://cs111.wellesley.edu/reference/colors          --turtle colors
+
 from turtle import Turtle , Screen
 import random
 

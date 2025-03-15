@@ -1,3 +1,5 @@
+# https://docs.python.org/3.1/library/turtle.html#turtle.textinput          --turtle.textinput docs
+
 import turtle
 from turtle import Turtle, Screen
 import random

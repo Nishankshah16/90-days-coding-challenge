@@ -1,3 +1,5 @@
+# https://docs.python.org/3/library/turtle.html#turtle.shape            --shape() and shapesize()
+
 from turtle import Turtle, Screen
 import random
 

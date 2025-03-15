@@ -1,3 +1,5 @@
+# https://docs.python.org/3.3/library/turtle.html?highlight=turtle#turtle.tracer        --tracer() method
+
 from turtle import Turtle, Screen
 import time
 from snake import Snake

@@ -1,3 +1,7 @@
+# https://games.washingtonpost.com/games/blackjack          -- blackjack game
+# https://docs.python.org/3/library/functions.html#sum      -- sum()
+# https://developers.google.com/edu/python/lists#list-methods       --List methods
+
 import random
 
 def compare(u_score, c_score):

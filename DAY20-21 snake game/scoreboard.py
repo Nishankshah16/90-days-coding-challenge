@@ -1,3 +1,5 @@
+# https://docs.python.org/3/library/turtle.html#turtle.write            --write()
+
 from turtle import Turtle
 
 ALIGNMENT = "center"

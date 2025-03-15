@@ -1,3 +1,7 @@
+# https://kanye.rest/               --kayne quotes API
+# https://sunrise-sunset.org/api    --sunrise and sunset times API
+# https://www.w3schools.com/python/ref_string_split.asp         --split()
+
 from tkinter import *
 import requests
 

@@ -1,3 +1,9 @@
+# https://docs.python.org/3/library/turtle.html         --turtle graphics docs
+# https://cs111.wellesley.edu/reference/colors          --turtle colors
+# https://pypi.org/project/prettytable/                 --prettytable
+# https://code.google.com/archive/p/prettytable/wikis/Tutorial.wiki         --prettytable docs
+
+
 # from turtle import *
 from prettytable import PrettyTable
 

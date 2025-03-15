@@ -1,3 +1,7 @@
+# https://opentdb.com/          --trivia DB
+# https://www.w3schools.com/html/html_entities.asp          --HTML entities
+# https://www.freeformatter.com/html-escape.html            --HTML unescape tool
+
 from question_model import Question
 from data import question_data
 from quiz_brain import QuizBrain

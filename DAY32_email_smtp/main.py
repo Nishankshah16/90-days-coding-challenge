@@ -1,3 +1,8 @@
+# https://docs.python.org/3/library/smtplib.html        --smtp docs
+# https://docs.python.org/3/library/datetime.html       --datetime docs
+# https://www.positivityblog.com/monday-motivation-quotes/      --monday motivation quotes
+# https://www.pythonanywhere.com/                       -- host code on cloud
+
 import smtplib
 import datetime
 import random

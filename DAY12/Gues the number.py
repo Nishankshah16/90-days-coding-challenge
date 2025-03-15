@@ -1,3 +1,6 @@
+# https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20         --ASCII text
+# https://pythontutor.com/visualize.html#mode=edit                                      -- Tutor (debug)
+
 import random
 
 print("Welcome to the number guessing game ")

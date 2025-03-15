@@ -1,0 +1,7 @@
+Adding environment variable to pythonAnywhere 
+
+Run command : export var_name=API_key_value
+
+update the code: os.environ.get("var_name")
+
+update command on schedule page : export var_name=API_key_value; python3 main.py

@@ -1,3 +1,5 @@
+# https://docs.python.org/3/library/turtle.html#turtle.listen           --listen()
+
 import turtle
 from turtle import Turtle, Screen
 import random
@@ -32,20 +34,6 @@ screen.onkey(turn_left, "a")
 screen.onkey(turn_right, "d")
 screen.onkey(clear, "c")
 screen.onkey(bring_to_start, "q")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 screen.exitonclick()

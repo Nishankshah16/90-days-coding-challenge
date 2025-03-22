@@ -7,6 +7,8 @@
 import requests
 import datetime as dt
 
+# https://docx.syndigo.com/developers/docs/natural-language-for-exercise   -- header 
+# https://trackapi.nutritionix.com/docs/#/default/post_v2_natural_exercise      --parameters
 #  Nutritionix  api key and id
 api_key=""
 api_id=""
@@ -39,7 +41,7 @@ data=response.json()
 print(data)
 
 today_date = dt.datetime.now().strftime("%d/%m/%Y")
-now_time = dt.datetime.now().strftime("%X")
+now_time = dt.datetime.now().strftime("%X")   # %X - time 18:34:25
 
 # API -> get username from get url
 username=""
@@ -47,6 +49,8 @@ project="myWorkoutsRegister"
 sheetname="workouts"
 sheet_endpoint=f"https://api.sheety.co/{username}/{project}/{sheetname}"
 
+# https://sheety.co/docs/requests.html      --making requests
+# https://requests.readthedocs.io/en/latest/user/authentication/#basic-authentication 
 for exercise in data["exercises"]:
     sheet_input={
         "workout": {
@@ -61,3 +65,11 @@ for exercise in data["exercises"]:
     print(response.text)
 
 
+# #No Authentication  
+# sheet_response = requests.post(sheet_endpoint, json=sheet_inputs)
+
+# #Bearer Token Authentication
+# bearer_headers = {
+# "Authorization": f"Bearer {YOUR TOKEN}"
+# }
+# sheet_response = requests.post(sheet_endpoint, json=sheet_inputs, headers=bearer_headers)

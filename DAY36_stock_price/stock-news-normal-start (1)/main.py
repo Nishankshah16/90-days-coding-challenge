@@ -1,4 +1,8 @@
 # https://www.tradingview.com/symbols/NASDAQ-TSLA/      -- stock price
+# https://www.alphavantage.co/                          --stock price api
+# https://newsapi.org/                                  --news API
+# https://www.twilio.com/en-us                          --twilio API
+
 import datetime as dt
 import requests
 import os
@@ -15,18 +19,17 @@ tiwilo_sid=""
 twilio_auth=""
     ## STEP 1: Use https://www.alphavantage.co/documentation/#daily
 # When stock price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
-api_key=""
+api_key=""  # alphavantage api key
 
 parameters={
     "function": "TIME_SERIES_DAILY",
     "symbol": STOCK_NAME,
     "apikey": api_key
 }
-url = STOCK_ENDPOINT
 
 
 #TODO 1. - Get yesterday's closing stock price. Hint: You can perform list comprehensions on Python dictionaries. e.g. [new_value for (key, value) in dictionary.items()]
-response=requests.get(url=url, params=parameters)
+response=requests.get(url=STOCK_ENDPOINT, params=parameters)
 data=response.json()["Time Series (Daily)"]
 
 lst = [value for (key, value) in data.items()]
@@ -43,26 +46,24 @@ difference_percentage= (float(difference)/float(yesterday_price))*100
 # print(difference_percentage)
 
 #TODO 5. - If TODO4 percentage is greater than 5 then print("Get News").
-# api_news="c4305c13589d4cb993297abfaa7a4c0e"
+news_api = "" # news api
 news_parameters={
-    "apiKey":"",
+    "apiKey": news_api,
     "q":"Tesla",
     "searchIn":"title"
 }
-# if difference_percentage >5:
-response_news=requests.get(url=NEWS_ENDPOINT,params=news_parameters)
-news_data=response_news.json()["articles"]
-
 
     ## STEP 2: https://newsapi.org/ 
-    # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
-articles_3= news_data[:3]
-# print(articles_3)
+    # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME.
 #TODO 6. - Instead of printing ("Get News"), use the News API to get articles related to the COMPANY_NAME.
-
+ 
+if difference_percentage >5:
+    response_news=requests.get(url=NEWS_ENDPOINT,params=news_parameters)
+    news_data=response_news.json()["articles"]
 
 #TODO 7. - Use Python slice operator to create a list that contains the first 3 articles. Hint: https://stackoverflow.com/questions/509211/understanding-slice-notation
-
+articles_3= news_data[:3]
+# print(articles_3)
 
     ## STEP 3: Use twilio.com/docs/sms/quickstart/python
     #to send a separate message with each article's title and description to your phone number. 

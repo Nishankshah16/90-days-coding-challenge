@@ -1,10 +1,15 @@
 # nutition_api= https://www.nutritionix.com/business/api
-
+# nutition_api docs = https://docx.syndigo.com/developers
+# sheety API = https://sheety.co/
+# sheety docs = https://sheety.co/docs/requests
+# make copy = https://docs.google.com/spreadsheets/d/1DHL6Y8XAHSC_KhJsa9QMekwP8b4YheWZY_sxlH3i494/edit?gid=0#gid=0
+ 
 import requests
 import datetime as dt
 
-api_key="9eb5cbfc27e07c3fb75f6f45794de819"
-api_id="372eece0"
+#  Nutritionix  api key and id
+api_key=""
+api_id=""
 # GENDER = "male"
 WEIGHT_KG = 65
 HEIGHT_CM = 173
@@ -26,19 +31,18 @@ parameters={
     "age": AGE
 }
 
-YOUR_USERNAME="nishankshah16"
-YOUR_PASSWORD="Nishu16@"
+# shetty username and password of authentication(Basic)
+YOUR_USERNAME=""
+YOUR_PASSWORD=""
 response=requests.post(url=API_ENDPOINT, json= parameters,headers=headers)
 data=response.json()
 print(data)
 
-
-
 today_date = dt.datetime.now().strftime("%d/%m/%Y")
 now_time = dt.datetime.now().strftime("%X")
 
-
-username="3550a86d20c174db2e94b4b24276862b"
+# API -> get username from get url
+username=""
 project="myWorkoutsRegister"
 sheetname="workouts"
 sheet_endpoint=f"https://api.sheety.co/{username}/{project}/{sheetname}"

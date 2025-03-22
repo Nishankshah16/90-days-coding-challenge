@@ -12,6 +12,7 @@ AGE = 27
 
 API_ENDPOINT="https://trackapi.nutritionix.com/v2/natural/exercise"
 input_exercise=input("Please tell what you did today: ")
+
 headers={
     "x-app-id": api_id,
     "x-app-key": api_key,
@@ -25,7 +26,9 @@ parameters={
     "age": AGE
 }
 
-response=requests.post(url=API_ENDPOINT, json= parameters, headers=headers)
+YOUR_USERNAME="nishankshah16"
+YOUR_PASSWORD="Nishu16@"
+response=requests.post(url=API_ENDPOINT, json= parameters,headers=headers)
 data=response.json()
 print(data)
 
@@ -50,7 +53,7 @@ for exercise in data["exercises"]:
         "calories": exercise["nf_calories"]
         }
     }
-    response=requests.post(url=sheet_endpoint,json=sheet_input)
+    response=requests.post(url=sheet_endpoint,json=sheet_input, auth=(YOUR_USERNAME,YOUR_PASSWORD))
     print(response.text)
 
 

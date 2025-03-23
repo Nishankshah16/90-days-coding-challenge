@@ -53,7 +53,7 @@ class FlightSearch:
         print(f"Your token expires in {response.json()['expires_in']} seconds")
         return response.json()['access_token']
     
-    def check_flight(self, origin_city_code, destination_city_code, from_time, to_time):
+    def check_flight(self, origin_city_code, destination_city_code, from_time, to_time, is_direct=True):
         header ={
             "Authorization" : f"Bearer {self._token}"
         }
@@ -63,7 +63,7 @@ class FlightSearch:
             "departureDate": from_time.strftime("%Y-%m-%d"),
             "returnDate" : to_time.strftime("%Y-%m-%d"),
             "adults" : 1,
-            "nonStop" : "true",
+            "nonStop" : "true" if is_direct else "false",
             "currencyCode" : "GBP",
             "max" : 10
         }

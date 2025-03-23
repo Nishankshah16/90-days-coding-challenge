@@ -1,0 +1,9 @@
+shetty(google sheet data management) - https://sheety.co/
+Amadeus Flight Search API - https://developers.amadeus.com/      -- reister on this link ->self service workspace and create a new Self-Service App
+Amadeus Flight Offer Docs - https://developers.amadeus.com/self-service/category/flights/api-doc/flight-offers-search/api-reference
+Amadeus How to work with API keys and tokens guide - https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335
+Amadeus Search for Airport Codes by City name - https://developers.amadeus.com/self-service/category/destination-experiences/api-doc/city-search/api-reference
+Twilio Messaging (SMS or WhatsApp) API - https://www.twilio.com/docs/messaging/quickstart/python
+International Air Transport Association (IATA) codes - https://en.wikipedia.org/wiki/IATA_airport_code#Cities_with_multiple_commercial_airports
+Official authorisation guide to find the endpoint for the token: https://developers.amadeus.com/self-service/apis-docs/guides/developer-guides/API-Keys/authorization/
+Beautifier - https://jsonpathfinder.com/
